@@ -13,6 +13,9 @@
     },
     "hooks": "pkgbuild/hooks.sh",
     "installdir": "/services/${name}",
-    "group": "services"
+    "group": "services",
+    "output" : {
+      "pkg" : {}
+    }
   }
 }
