@@ -1,0 +1,18 @@
+{
+  "name": "mf-hosting",
+  "description" : "common hosting difinitions",
+  "pkgbuild": {
+    "arch": [
+      "aarch64",
+      "armv7h",
+      "x86_64"
+    ],
+    "depends": {
+      "systemd": ">=249.7",
+      "nginx-mainline": ">=1.21.1"
+    },
+    "hooks": "pkgbuild/hooks.sh",
+    "installdir": "/services/${name}",
+    "group": "services"
+  }
+}
