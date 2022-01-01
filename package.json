@@ -3,12 +3,10 @@
   "description" : "common hosting difinitions",
   "pkgbuild": {
     "arch": [
-      "aarch64",
-      "armv7h",
-      "x86_64"
+      "aarch64"
     ],
     "depends": {
-      "systemd": ">=249.7",
+      "systemd": ">=250",
       "nginx-mainline": ">=1.21.1"
     },
     "hooks": "pkgbuild/hooks.sh",
