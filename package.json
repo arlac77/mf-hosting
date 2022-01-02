@@ -1,7 +1,7 @@
 {
   "name": "mf-hosting",
   "description" : "common hosting difinitions",
-  "pkgbuild": {
+  "pkg": {
     "arch": [
       "aarch64"
     ],
@@ -9,11 +9,10 @@
       "systemd": ">=250",
       "nginx-mainline": ">=1.21.1"
     },
-    "hooks": "pkgbuild/hooks.sh",
     "installdir": "/services/${name}",
     "group": "services",
     "output" : {
-      "pkg" : {}
+      "arch" : {}
     }
   }
 }
