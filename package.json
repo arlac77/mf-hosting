@@ -7,7 +7,7 @@
     ],
     "depends": {
       "systemd": ">=250",
-      "nginx-mainline": ">=1.21.1"
+      "nginx-mainline": ">=1.21.4"
     },
     "installdir": "/services/${name}",
     "group": "services",
