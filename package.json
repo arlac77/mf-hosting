@@ -1,12 +1,13 @@
 {
   "name": "mf-hosting",
-  "description" : "common hosting difinitions",
+  "description" : "common hosting definitions",
   "pkg": {
+    "abstract": true,
     "arch": [
       "aarch64"
     ],
     "depends": {
-      "systemd": ">=250",
+      "systemd": ">=250.4",
       "nginx-mainline": ">=1.21.4"
     },
     "installdir": "/services/${name}",
