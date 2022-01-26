@@ -10,6 +10,8 @@
       "systemd": ">=250.4",
       "nginx-mainline": ">=1.21.4"
     },
+    "nginx.sites.dir": "/etc/nginx/sites/common",
+    "csp.endpoint": "/services/reports/csp",
     "installdir": "/services/${name}",
     "group": "services",
     "output" : {
