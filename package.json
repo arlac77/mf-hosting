@@ -11,7 +11,7 @@
       "nginx-mainline": ">=1.21.4"
     },
     "nginx.sites.dir": "/etc/nginx/sites/common",
-    "csp.endpoint": "/services/csp",
+    "csp.endpoint": "/services/csp/upload",
     "installdir": "/services/${name}",
     "group": "services",
     "output" : {
