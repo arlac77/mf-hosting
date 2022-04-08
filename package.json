@@ -7,8 +7,8 @@
       "aarch64"
     ],
     "depends": {
-      "systemd": ">=250.3",
-      "nginx-mainline": ">=1.21.4"
+      "systemd": ">=250.4",
+      "nginx-mainline": ">=1.21.6"
     },
     "nginx.sites.dir": "/etc/nginx/sites/common",
     "systemd.unit.dir": "/usr/lib/systemd/system",
