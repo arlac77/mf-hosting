@@ -15,7 +15,6 @@
     "systemd.unit.file": "${name}.service",
     "csp.endpoint": "/services/csp/upload",
     "installdir": "/services/${name}",
-    "group": "services",
     "output" : {
       "arch" : {}
     }
