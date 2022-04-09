@@ -10,11 +10,12 @@
       "systemd": ">=250.4",
       "nginx-mainline": ">=1.21.6"
     },
-    "nginx.sites.dir": "/etc/nginx/sites/common",
-    "systemd.unit.dir": "/usr/lib/systemd/system",
+    "nginx.sites.dir": "/etc/nginx/sites/common/",
+    "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
+    "systemd.unit.dir": "/usr/lib/systemd/system/",
     "systemd.unit.file": "${name}.service",
     "csp.endpoint": "/services/csp/upload",
-    "installdir": "/services/${name}",
+    "installdir": "/services/${name}/",
     "group": "services",
     "output" : {
       "arch" : {}
