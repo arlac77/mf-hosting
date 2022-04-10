@@ -11,6 +11,8 @@
       "systemd": ">=250.4",
       "nginx-mainline": ">=1.21.6"
     },
+    
+    "public.base.url": "https://mfelten.dynv6.net/",
     "nginx.sites.dir": "/etc/nginx/sites/common/",
     "polkit.rules.dir": "/etc/polkit-1/rules.d/",
     "well-known.content.dir": "/srv/http/.well-known/",
