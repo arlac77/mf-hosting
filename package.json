@@ -3,6 +3,7 @@
   "description" : "common hosting definitions",
   "pkg": {
     "abstract": true,
+    "variant": "mf",
     "arch": [
       "aarch64"
     ],
