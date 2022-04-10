@@ -12,6 +12,8 @@
       "nginx-mainline": ">=1.21.6"
     },
     
+    "os.user": "${name}",
+    "os.group": "${name}",
     "public.base.url": "https://mfelten.dynv6.net/",
     "nginx.sites.dir": "/etc/nginx/sites/common/",
     "polkit.rules.dir": "/etc/polkit-1/rules.d/",
