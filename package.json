@@ -21,8 +21,8 @@
     "config.dir": "/etc/${name}/",
     "var.dir": "/var/lib/${name}/",
     "run.dir": "/run/${name}/",
-    "socket.http":"${run.dir}http/socket"
-    "group": "services",
+    "socket.http":"${run.dir}http/socket",
+    "groups": "services",
     "output" : {
       "arch" : {}
     }
