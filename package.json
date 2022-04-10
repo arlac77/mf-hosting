@@ -11,14 +11,19 @@
       "nginx-mainline": ">=1.21.6"
     },
     "nginx.sites.dir": "/etc/nginx/sites/common/",
+    "well-known.content.dir": "/srv/http/.well-known/",
     "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
+    "sysusers.config.dir": "/usr/lib/sysusers.d/",
     "systemd.unit.dir": "/usr/lib/systemd/system/",
     "systemd.unit.file": "${name}.service",
     "csp.endpoint": "/services/csp/upload",
-    "installdir": "/services/${name}/",
+    "install.dir": "/services/${name}/",
+    "config.dir": "/etc/${name}/"
     "group": "services",
     "output" : {
       "arch" : {}
     }
+
+    "installdir": "/services/${name}/"
   }
 }
