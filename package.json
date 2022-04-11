@@ -21,7 +21,6 @@
     "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
     "sysusers.config.dir": "/usr/lib/sysusers.d/",
     "systemd.unit.dir": "/usr/lib/systemd/system/",
-    "systemd.unit.file": "${name}.service",
     "csp.endpoint": "/services/csp/upload",
     "install.base.dir": "/services/",
     "install.dir": "${install.base.dir}${name}/",
