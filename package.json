@@ -21,6 +21,7 @@
     "sysusers.config.dir": "/usr/lib/sysusers.d/",
     "systemd.unit.dir": "/usr/lib/systemd/system/",
     "csp.endpoint": "/services/csp/upload",
+    "journal.endpoint": "/services/journal",
     "install.base.dir": "/services/",
     "install.dir": "${install.base.dir}${name}/",
     "config.dir": "/etc/${name}/",
