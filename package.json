@@ -1,7 +1,7 @@
 {
   "name": "mf-hosting",
   "description" : "common hosting definitions",
-  "pkg": {
+  "pkgbuild": {
     "abstract": true,
     "variant": "mf",
     "arch": [
