@@ -1,6 +1,7 @@
 {
   "name": "mf-hosting",
-  "description" : "common hosting definitions",
+  "version" : "1.0.0",
+  "description" : "hosting definitions @MF",
   "pkgbuild": {
     "abstract": true,
     "variant": "mf",
@@ -27,7 +28,7 @@
     "config.dir": "/etc/${name}/",
     "var.dir": "/var/lib/${name}/",
     "run.dir": "/run/${name}/",
-    "socket.http":"${run.dir}http/socket",
+    "socket.http": "${run.dir}http/socket",
     "socket.http.user": "http",
     "socket.http.group": "http",
     "groups": "services",
