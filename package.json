@@ -1,12 +1,14 @@
 {
   "name": "mf-hosting",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "description" : "hosting definitions @MF",
   "pkgbuild": {
     "abstract": true,
     "variant": "mf",
     "arch": [
-      "aarch64"
+      "aarch64",
+      "arm",
+      "x86_64"
     ],
     "depends": {
       "systemd": ">=250.5",
