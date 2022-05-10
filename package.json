@@ -9,7 +9,7 @@
       "aarch64"
     ],
     "depends": {
-      "systemd": ">=250.4",
+      "systemd": ">=250.5",
       "nginx-mainline": ">=1.21.6"
     },
     "os.user": "${name}",
