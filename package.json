@@ -1,6 +1,6 @@
 {
   "name": "mf-hosting",
-  "version" : "1.1.1",
+  "version" : "1.1.2",
   "description" : "hosting definitions @MF",
   "pkgbuild": {
     "abstract": true,
@@ -35,7 +35,8 @@
     "socket.http.group": "http",
     "groups": "services",
     "output" : {
-      "arch" : {}
+      "arch" : {},
+      "debian": {}
     }
   }
 }
