@@ -1,7 +1,7 @@
 {
   "name": "mf-hosting",
-  "version" : "1.2.0",
-  "description" : "hosting definitions @MF",
+  "version": "1.2.1",
+  "description": "hosting definitions @MF",
   "pkgbuild": {
     "abstract": true,
     "variant": "mf",
@@ -36,8 +36,8 @@
     "socket.http.user": "http",
     "socket.http.group": "http",
     "groups": "services",
-    "output" : {
-      "arch" : {},
+    "output": {
+      "arch": {},
       "debian": {}
     }
   }
