@@ -23,6 +23,7 @@
     "nginx.sites.dir": "/etc/nginx/sites/common/",
     "polkit.rules.dir": "/etc/polkit-1/rules.d/",
     "well-known.content.dir": "/srv/http/.well-known/",
+    "backup.config.dir": "/usr/lib/backup.d/",
     "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
     "sysusers.config.dir": "/usr/lib/sysusers.d/",
     "systemd.unit.dir": "/usr/lib/systemd/system/",
