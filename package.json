@@ -41,5 +41,10 @@
       "arch": {},
       "debian": {}
     }
+  },
+  "template": {
+  	"inheritFrom": [
+  	  "arlac77/semantic-release"
+  	]
   }
 }
