@@ -1,0 +1,36 @@
+name: CI
+'on': push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 16.15.0
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Build / Test Node ${{ matrix.node-version }}'
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: '${{ matrix.node-version }}'
+          cache: 'npm'
+      - run: npm install
+      - run: npm run build --if-present
+      - run: npm run cover --if-present
+  release:
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3.1.1
+        with:
+          node-version: 16.15.0
+          cache: 'npm'
+      - run: npm install
+      - run: npx semantic-release
+        env:
+          CI: 'true'
+          PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
+          NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
