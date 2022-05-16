@@ -32,6 +32,7 @@
       "systemd": ">=250.5",
       "nginx-mainline": ">=1.21.6"
     },
+    "html.base.href": "<base href=\"{{http.path}}/\"/>",
     "http.origin": "https://mfelten.dynv6.net",
     "http.path": "/services/${name}",
     "install.base.dir": "/services/",
