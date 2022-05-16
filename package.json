@@ -2,49 +2,61 @@
   "name": "mf-hosting",
   "version": "1.2.1",
   "description": "hosting definitions @MF",
+  "devDependencies": {
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arlac77/mf-hosting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arlac77/mf-hosting/issues"
+  },
+  "homepage": "https://github.com/arlac77/mf-hosting#readme",
   "pkgbuild": {
+    "output": {
+      "arch": {},
+      "debian": {}
+    },
+    "groups": "services",
     "abstract": true,
-    "variant": "mf",
     "arch": [
       "x86_64",
       "aarch64",
       "arm"
     ],
+    "backup.config.dir": "/usr/lib/backup.d/",
+    "config.dir": "/etc/${name}/",
+    "csp.endpoint": "/services/csp/upload",
     "depends": {
       "systemd": ">=250.5",
       "nginx-mainline": ">=1.21.6"
     },
-    "os.user": "${name}",
-    "os.group": "${name}",
-    "public.base.url": "https://mfelten.dynv6.net/",
     "http.origin": "https://mfelten.dynv6.net",
     "http.path": "/services/${name}",
-    "csp.endpoint": "/services/csp/upload",
-    "nginx.sites.dir": "/etc/nginx/sites/common/",
-    "polkit.rules.dir": "/etc/polkit-1/rules.d/",
-    "well-known.content.dir": "/srv/http/.well-known/",
-    "backup.config.dir": "/usr/lib/backup.d/",
-    "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
-    "sysusers.config.dir": "/usr/lib/sysusers.d/",
-    "systemd.unit.dir": "/usr/lib/systemd/system/",
-    "journal.endpoint": "/services/journal",
     "install.base.dir": "/services/",
     "install.dir": "${install.base.dir}${name}/",
-    "config.dir": "/etc/${name}/",
-    "var.dir": "/var/lib/${name}/",
+    "journal.endpoint": "/services/journal",
+    "nginx.sites.dir": "/etc/nginx/sites/common/",
+    "os.group": "${name}",
+    "os.user": "${name}",
+    "polkit.rules.dir": "/etc/polkit-1/rules.d/",
+    "public.base.url": "https://mfelten.dynv6.net/",
     "run.dir": "/run/${name}/",
     "socket.http": "${run.dir}http/socket",
-    "socket.http.user": "http",
     "socket.http.group": "http",
-    "groups": "services",
-    "output": {
-      "arch": {},
-      "debian": {}
-    }
+    "socket.http.user": "http",
+    "systemd.unit.dir": "/usr/lib/systemd/system/",
+    "sysusers.config.dir": "/usr/lib/sysusers.d/",
+    "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
+    "var.dir": "/var/lib/${name}/",
+    "variant": "mf",
+    "well-known.content.dir": "/srv/http/.well-known/"
   },
   "template": {
-  	"inheritFrom": [
-  	  "arlac77/template-semantic-release"
-  	]
+    "inheritFrom": [
+      "arlac77/template-npm",
+      "arlac77/template-semantic-release"
+    ]
   }
 }
