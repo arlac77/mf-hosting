@@ -28,7 +28,7 @@
     "backup.config.dir": "/usr/lib/backup.d/",
     "config.dir": "/etc/${name}/",
     "csp.endpoint": "/services/csp/upload",
-    "csp.header": "default-src 'self'; report-uri {{csp.endpoint}}",
+    "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
     "depends": {
       "systemd": ">=251.4",
       "nginx-mainline": ">=1.21.6"
