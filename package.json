@@ -31,7 +31,7 @@
     "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
     "depends": {
       "systemd": ">=251.6",
-      "nginx-mainline": ">=1.21.6"
+      "nginx-mainline": ">=1.23.1"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
     "http.base.path": "/${groups}",
