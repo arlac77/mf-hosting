@@ -1,6 +1,6 @@
 {
   "name": "mf-hosting",
-  "version": "1.2.1",
+  "version": "0.0.0-semantic-release",
   "description": "hosting definitions @MF",
   "devDependencies": {
     "semantic-release": "^19.0.5"
@@ -30,7 +30,7 @@
     "csp.endpoint": "/services/csp/upload",
     "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
     "depends": {
-      "systemd": ">=252.1",
+      "systemd": ">=252.2",
       "nginx-mainline": ">=1.23.2"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
