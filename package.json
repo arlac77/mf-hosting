@@ -37,6 +37,8 @@
     "http.base.path": "/${groups}",
     "http.origin": "https://mfelten.dynv6.net",
     "http.path": "${http.base.path}/${name}",
+    "http.api.path": "${http.path}/api",
+    "http.api": "${http.origin}${http.api.path}",
     "install.base.dir": "/${groups}/",
     "install.dir": "${install.base.dir}${name}${install.sub.dir}",
     "install.sub.dir": "/",
@@ -55,7 +57,9 @@
     "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
     "var.dir": "/var/lib/${name}/",
     "variant": "mf",
-    "well-known.content.dir": "/srv/http/.well-known/"
+    "well-known.content.dir": "/srv/http/.well-known/",
+    "wss.origin": "${http.origin}",
+    "wss.api": "${wss.origin}${http.api.path}"
   },
   "template": {
     "inheritFrom": [
