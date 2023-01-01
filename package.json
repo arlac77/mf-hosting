@@ -30,7 +30,7 @@
     "csp.endpoint": "/services/csp/upload",
     "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
     "depends": {
-      "systemd": ">=252.2",
+      "systemd": ">=252.4",
       "nginx-mainline": ">=1.23.2"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
