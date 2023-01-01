@@ -56,7 +56,7 @@
     "sysusers.config.dir": "/usr/lib/sysusers.d/",
     "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
     "var.dir": "/var/lib/${name}/",
-    "variant": "mf",
+    "variant": "mf.linux",
     "well-known.content.dir": "/srv/http/.well-known/",
     "wss.origin": "${http.origin}",
     "wss.api": "${wss.origin}${http.api.path}"
