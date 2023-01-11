@@ -3,11 +3,11 @@
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions @MF",
   "devDependencies": {
-    "semantic-release": "^19.0.5"
+    "semantic-release": "^20.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arlac77/mf-hosting.git"
+    "url": "https://github.com/arlac77/mf-hosting"
   },
   "bugs": {
     "url": "https://github.com/arlac77/mf-hosting/issues"
@@ -34,11 +34,11 @@
       "nginx-mainline": ">=1.23.2"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
+    "http.api": "${http.origin}${http.api.path}",
+    "http.api.path": "${http.path}/api",
     "http.base.path": "/${groups}",
     "http.origin": "https://mfelten.dynv6.net",
     "http.path": "${http.base.path}/${name}",
-    "http.api.path": "${http.path}/api",
-    "http.api": "${http.origin}${http.api.path}",
     "install.base.dir": "/${groups}/",
     "install.dir": "${install.base.dir}${name}${install.sub.dir}",
     "install.sub.dir": "/",
@@ -58,8 +58,8 @@
     "var.dir": "/var/lib/${name}/",
     "variant": "mf.linux",
     "well-known.content.dir": "/srv/http/.well-known/",
-    "wss.origin": "${http.origin}",
-    "wss.api": "${wss.origin}${http.api.path}"
+    "wss.api": "${wss.origin}${http.api.path}",
+    "wss.origin": "${http.origin}"
   },
   "template": {
     "inheritFrom": [
