@@ -16,8 +16,10 @@
   "pkgbuild": {
     "output": {
       "arch": {},
-      "debian": {}
+      "debian": {},
+      "rpm": {}
     },
+    "vendor": "MF",
     "groups": "services",
     "abstract": true,
     "arch": [
