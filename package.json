@@ -31,7 +31,8 @@
     "csp.endpoint": "/services/csp/upload",
     "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
     "content": {
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"    	
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
     },
     "depends": {
       "systemd": ">=252.4",
