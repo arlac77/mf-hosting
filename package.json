@@ -1,7 +1,7 @@
 {
   "name": "mf-hosting",
   "version": "0.0.0-semantic-release",
-  "description": "hosting definitions @MF",
+  "description": "unix hosting definitions @MF",
   "devDependencies": {
     "semantic-release": "^20.0.2"
   },
@@ -28,14 +28,12 @@
     ],
     "backup.config.dir": "/usr/lib/backup.d/",
     "config.dir": "/etc/${name}/",
-    "csp.endpoint": "/services/csp/upload",
-    "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
     "content": {
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
       "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
     },
     "depends": {
-      "systemd": ">=252.5",
+      "systemd": ">=253.0",
       "nginx-mainline": ">=1.23.2"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
