@@ -22,9 +22,9 @@
     "vendor": "MF",
     "groups": "services",
     "arch": [
-      "x86_64",
       "aarch64",
-      "arm"
+      "arm",
+      "x86_64",
     ],
     "backup.config.dir": "/usr/lib/backup.d/",
     "config.dir": "/etc/${name}/",
