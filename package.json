@@ -33,7 +33,7 @@
       "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
     },
     "depends": {
-      "systemd": ">=253.0",
+      "systemd": ">=253",
       "nginx-mainline": ">=1.23.2"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
