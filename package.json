@@ -13,57 +13,70 @@
     "url": "https://github.com/arlac77/mf-hosting/issues"
   },
   "homepage": "https://github.com/arlac77/mf-hosting#readme",
-  "pkgbuild": {
-    "output": {
-      "arch": {},
-      "debian": {},
-      "rpm": {}
+  "pkgbuild": [
+    {
+      "output": {
+        "arch": {},
+        "debian": {},
+        "rpm": {}
+      },
+      "vendor": "MF",
+      "groups": "services",
+      "arch": [
+        "aarch64",
+        "arm",
+        "x86_64"
+      ],
+      "backup.config.dir": "/usr/lib/backup.d/",
+      "config.dir": "/etc/${name}/",
+      "content": {
+        "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+        "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
+      },
+      "depends": {
+        "systemd": ">=253",
+        "nginx-mainline": ">=1.23.2"
+      },
+      "html.base.href": "<base href=\"{{http.path}}/\"/>",
+      "http.api": "${http.origin}${http.api.path}",
+      "http.api.path": "${http.path}/api",
+      "http.base.path": "/services",
+      "http.origin": "https://mfelten.dynv6.net",
+      "http.path": "${http.base.path}/${name}",
+      "install.base.dir": "/services/",
+      "install.dir": "${install.base.dir}${name}${install.sub.dir}",
+      "install.sub.dir": "/",
+      "journal.endpoint": "/services/journal",
+      "nginx.sites.dir": "/etc/nginx/sites/common/",
+      "os.group": "${name}",
+      "os.user": "${name}",
+      "polkit.rules.dir": "/etc/polkit-1/rules.d/",
+      "public.base.url": "https://mfelten.dynv6.net/",
+      "run.dir": "/run/${name}/",
+      "socket.http": "${run.dir}http/socket",
+      "socket.http.group": "http",
+      "socket.http.user": "http",
+      "systemd.unit.dir": "/usr/lib/systemd/system/",
+      "sysusers.config.dir": "/usr/lib/sysusers.d/",
+      "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
+      "var.dir": "/var/lib/${name}/",
+      "variant": "mf.linux",
+      "well-known.content.dir": "/srv/http/.well-known/",
+      "wss.api": "${wss.origin}${http.api.path}",
+      "wss.origin": "${http.origin}",
+      "backup.lib.dir": "/usr/lib/backup.d/"
     },
-    "vendor": "MF",
-    "groups": "services",
-    "arch": [
-      "aarch64",
-      "arm",
-      "x86_64",
-    ],
-    "backup.config.dir": "/usr/lib/backup.d/",
-    "config.dir": "/etc/${name}/",
-    "content": {
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
-      "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
-    },
-    "depends": {
-      "systemd": ">=253",
-      "nginx-mainline": ">=1.23.2"
-    },
-    "html.base.href": "<base href=\"{{http.path}}/\"/>",
-    "http.api": "${http.origin}${http.api.path}",
-    "http.api.path": "${http.path}/api",
-    "http.base.path": "/services",
-    "http.origin": "https://mfelten.dynv6.net",
-    "http.path": "${http.base.path}/${name}",
-    "install.base.dir": "/services/",
-    "install.dir": "${install.base.dir}${name}${install.sub.dir}",
-    "install.sub.dir": "/",
-    "journal.endpoint": "/services/journal",
-    "nginx.sites.dir": "/etc/nginx/sites/common/",
-    "os.group": "${name}",
-    "os.user": "${name}",
-    "polkit.rules.dir": "/etc/polkit-1/rules.d/",
-    "public.base.url": "https://mfelten.dynv6.net/",
-    "run.dir": "/run/${name}/",
-    "socket.http": "${run.dir}http/socket",
-    "socket.http.group": "http",
-    "socket.http.user": "http",
-    "systemd.unit.dir": "/usr/lib/systemd/system/",
-    "sysusers.config.dir": "/usr/lib/sysusers.d/",
-    "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
-    "var.dir": "/var/lib/${name}/",
-    "variant": "mf.linux",
-    "well-known.content.dir": "/srv/http/.well-known/",
-    "wss.api": "${wss.origin}${http.api.path}",
-    "wss.origin": "${http.origin}"
-  },
+    {
+      "requires": {
+        "properties": {
+          "kronos": true
+        }
+      },
+      "content": {
+        "${backup.lib.dir}${name}.conf": "pkg/backup.conf"
+      }
+    }
+  ],
   "template": {
     "inheritFrom": [
       "arlac77/template-npm",
