@@ -75,7 +75,8 @@
       "content": {
         "${backup.lib.dir}${name}.conf": "pkg/backup.conf"
       },
-      "backup": "${config.dir}config.json"
+      "backup": "${config.dir}config.json",
+      "hooks": "pkg/hooks.sh"
     }
   ],
   "template": {
