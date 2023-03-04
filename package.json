@@ -72,7 +72,7 @@
         }
       },
       "content": {
-        "${backup.lib.dir}${name}.conf": "pkg/backup.conf"
+        "${backup.lib.dir}${name}.backup": "pkg/service.backup"
       },
       "backup": "${config.dir}config.json",
       "hooks": "pkg/hooks.sh",
