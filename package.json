@@ -37,7 +37,6 @@
         "systemd": ">=253",
         "nginx-mainline": ">=1.23.2"
       },
-      "html.base.href": "<base href=\"{{http.path}}/\"/>",
       "http.api": "${http.origin}${http.api.path}",
       "http.api.path": "${http.path}/api",
       "http.base.path": "/services",
@@ -76,7 +75,8 @@
         "${backup.lib.dir}${name}.conf": "pkg/backup.conf"
       },
       "backup": "${config.dir}config.json",
-      "hooks": "pkg/hooks.sh"
+      "hooks": "pkg/hooks.sh",
+      "variant": "mf.linux"
     }
   ],
   "template": {
