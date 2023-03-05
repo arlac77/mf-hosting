@@ -67,7 +67,7 @@
     },
     {
       "requires": {
-        "dependency": {
+        "dependencies": {
           "@kronos-integration/service": ">=1.0.0"
         },
         "properties": {
