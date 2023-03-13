@@ -75,10 +75,10 @@
         }
       },
       "content": {
-        "${backup.lib.dir}${name}.backup": "pkg/service.backup"
+        "${backup.lib.dir}${name}.backup": "pkg/service.backup",
+        "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf"
       },
       "backup": "${config.dir}config.json",
-      "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
       "hooks": "pkg/hooks.sh",
       "variant": "mf.linux"
     }
