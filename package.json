@@ -76,7 +76,8 @@
       },
       "content": {
         "${backup.lib.dir}${name}.backup": "pkg/service.backup",
-        "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf"
+        "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
+        "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
       },
       "backup": "${config.dir}config.json",
       "hooks": "pkg/hooks.sh",
