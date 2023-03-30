@@ -34,8 +34,8 @@
         "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
       },
       "depends": {
-        "systemd": ">=253.1",
-        "nginx-mainline": ">=1.23.2"
+        "systemd": ">=253.2",
+        "nginx-mainline": ">=1.23.4"
       },
       "http.api": "${http.origin}${http.api.path}",
       "http.api.path": "${http.path}/api",
@@ -68,7 +68,7 @@
     {
       "requires": {
         "dependencies": {
-          "@kronos-integration/service": ">=1.0.0"
+          "@kronos-integration/service": ">=10.0.0"
         },
         "properties": {
           "kronos": true
