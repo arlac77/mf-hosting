@@ -82,6 +82,13 @@
       "backup": "${config.dir}config.json",
       "hooks": "pkg/hooks.sh",
       "variant": "mf.linux"
+    },
+    {
+      "requires": {
+        "output" : "docker"
+      },
+      "install.dir": "/app",
+      "variant": "mf.linux"
     }
   ],
   "template": {
