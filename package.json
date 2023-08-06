@@ -63,7 +63,8 @@
       "well-known.content.dir": "/srv/http/.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "${http.origin}",
-      "backup.lib.dir": "/usr/lib/backup.d/"
+      "backup.lib.dir": "/usr/lib/backup.d/",
+      "node.exe": "/usr/bin/node"
     },
     {
       "requires": {
