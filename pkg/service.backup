@@ -13,5 +13,5 @@ restore()
 sync()
 {
     mkdir -p /etc/{{name}}
-    rsync -e "ssh -i /root/.ssh/rsync" --stats -ra -X -A -S root@$SOURCE_HOST:/etc/{{name}} /etc/
+    rsync -e "ssh -i /root/.ssh/rsync" -ra -X -A -S --stats root@$SOURCE_HOST:/etc/{{name}} /etc/|grep -E -v '(data|time):'
 }
