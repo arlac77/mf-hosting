@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "description": "unix hosting definitions @MF",
   "devDependencies": {
-    "semantic-release": "^22.0.0"
+    "semantic-release": "^22.0.1"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
         "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
       },
       "depends": {
-        "systemd": ">=254.3",
+        "systemd": ">=254.4",
         "nginx-mainline": ">=1.25.2"
       },
       "http.api": "${http.origin}${http.api.path}",
