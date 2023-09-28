@@ -64,7 +64,8 @@
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "${http.origin}",
       "backup.lib.dir": "/usr/lib/backup.d/",
-      "node.exe": "/usr/bin/node"
+      "node.exe": "/usr/bin/node",
+      "bun.exe": "/usr/bin/bun"
     },
     {
       "requires": {
