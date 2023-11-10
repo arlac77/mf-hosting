@@ -35,7 +35,7 @@
       },
       "depends": {
         "systemd": ">=254.6",
-        "nginx-mainline": ">=1.25.2"
+        "nginx-mainline": ">=1.25.3"
       },
       "http.api": "${http.origin}${http.api.path}",
       "http.api.path": "${http.path}/api",
