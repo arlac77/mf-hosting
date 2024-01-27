@@ -34,7 +34,7 @@
         "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
       },
       "depends": {
-        "systemd": ">=255.2",
+        "systemd": ">=255.3",
         "nginx-mainline": ">=1.25.3"
       },
       "http.api": "${http.origin}${http.api.path}",
