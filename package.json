@@ -27,6 +27,10 @@
         "arm",
         "x86_64"
       ],
+      "properties": {
+        "systemd": true,
+        "nginx": true
+      },
       "backup.config.dir": "/usr/lib/backup.d/",
       "config.dir": "/etc/${name}/",
       "content": {
