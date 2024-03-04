@@ -8,4 +8,5 @@
 
 Hosting definitions
 
-Information used to create packages
+Information used to create packages/images
+

@@ -1,7 +1,7 @@
 {
   "name": "mf-hosting",
   "version": "0.0.0-semantic-release",
-  "description": "unix hosting definitions @MF",
+  "description": "hosting definitions @MF",
   "devDependencies": {
     "semantic-release": "^22.0.12"
   },
@@ -16,9 +16,29 @@
   "pkgbuild": [
     {
       "output": {
-        "arch": {},
-        "debian": {},
-        "rpm": {}
+        "arch": {
+          "properties": {
+            "systemd": true,
+            "nginx": true
+          }
+        },
+        "debian": {
+          "properties": {
+            "systemd": true,
+            "nginx": true
+          }
+        },
+        "rpm": {
+          "properties": {
+            "systemd": true,
+            "nginx": true
+          }
+        },
+        "docker": {
+          "properties": {
+            "install.dir": "/app"
+          }
+        }
       },
       "vendor": "MF",
       "groups": "services",
@@ -27,10 +47,6 @@
         "arm",
         "x86_64"
       ],
-      "properties": {
-        "systemd": true,
-        "nginx": true
-      },
       "backup.config.dir": "/usr/lib/backup.d/",
       "config.dir": "/etc/${name}/",
       "content": {
@@ -87,13 +103,6 @@
       },
       "backup": "${config.dir}config.json",
       "hooks": "pkg/hooks.sh",
-      "variant": "mf.linux"
-    },
-    {
-      "requires": {
-        "output": "docker"
-      },
-      "install.dir": "/app",
       "variant": "mf.linux"
     }
   ],
