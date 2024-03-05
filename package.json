@@ -85,7 +85,8 @@
       "wss.origin": "${http.origin}",
       "backup.lib.dir": "/usr/lib/backup.d/",
       "node.exe": "/usr/bin/node",
-      "bun.exe": "/usr/bin/bun"
+      "bun.exe": "/usr/bin/bun",
+      "nginx.location.trailer": ""
     },
     {
       "requires": {
