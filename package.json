@@ -20,31 +20,38 @@
           "properties": {
             "systemd": true,
             "nginx": true
+          },
+          "arch": ["aarch64"],
+          "depends" : {
+          	 "systemd": ">=255.4",
+          	 "nginx-mainline": ">=1.25.4"
           }
         },
         "debian": {
           "properties": {
             "systemd": true,
             "nginx": true
-          }
+          },
+          "arch": ["aarch64","x86_64"]
         },
         "rpm": {
           "properties": {
             "systemd": true,
             "nginx": true
-          }
+          },
+          "arch": ["aarch64"]
         },
         "docker": {
           "properties": {
             "install.dir": "/app"
-          }
+          },
+          "arch": ["aarch64"]
         }
       },
       "vendor": "MF",
       "groups": "services",
       "arch": [
         "aarch64",
-        "arm",
         "x86_64"
       ],
       "backup.config.dir": "/usr/lib/backup.d/",
