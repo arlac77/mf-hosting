@@ -21,10 +21,12 @@
             "systemd": true,
             "nginx": true
           },
-          "arch": ["aarch64"],
-          "depends" : {
-          	 "systemd": ">=255.4",
-          	 "nginx-mainline": ">=1.25.4"
+          "arch": [
+            "aarch64"
+          ],
+          "depends": {
+            "systemd": ">=255.4",
+            "nginx-mainline": ">=1.25.4"
           }
         },
         "debian": {
@@ -32,20 +34,27 @@
             "systemd": true,
             "nginx": true
           },
-          "arch": ["aarch64","x86_64"]
+          "arch": [
+            "aarch64",
+            "x86_64"
+          ]
         },
         "rpm": {
           "properties": {
             "systemd": true,
             "nginx": true
           },
-          "arch": ["aarch64"]
+          "arch": [
+            "aarch64"
+          ]
         },
         "docker": {
           "properties": {
             "install.dir": "/app"
           },
-          "arch": ["aarch64"]
+          "arch": [
+            "aarch64"
+          ]
         }
       },
       "vendor": "MF",
