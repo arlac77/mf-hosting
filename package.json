@@ -2,6 +2,7 @@
   "name": "mf-hosting",
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions @MF",
+  "keywords" : ["npm-pkgbuild"],
   "devDependencies": {
     "semantic-release": "^22.0.12"
   },
