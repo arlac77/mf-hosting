@@ -70,10 +70,6 @@
         "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
         "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
       },
-      "dependencies": {
-        "systemd": ">=255.4",
-        "nginx-mainline": ">=1.25.4"
-      },
       "http.api": "${http.origin}${http.api.path}",
       "http.api.path": "${http.path}/api",
       "http.base.path": "/services",
