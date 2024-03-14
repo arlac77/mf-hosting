@@ -8,5 +8,4 @@
 
 Hosting definitions
 
-Information used to create packages/images
-
+Information used to create packages/images used by npm-pkgbuild
