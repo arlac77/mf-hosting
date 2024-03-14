@@ -2,7 +2,9 @@
   "name": "mf-hosting",
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions @MF",
-  "keywords" : ["npm-pkgbuild"],
+  "keywords": [
+    "npm-pkgbuild"
+  ],
   "devDependencies": {
     "semantic-release": "^22.0.12"
   },
@@ -28,6 +30,10 @@
           "dependencies": {
             "systemd": ">=255.4",
             "nginx-mainline": ">=1.25.4"
+          },
+          "content": {
+            "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+            "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
           }
         },
         "debian": {
@@ -66,10 +72,6 @@
       ],
       "backup.config.dir": "/usr/lib/backup.d/",
       "config.dir": "/etc/${name}/",
-      "content": {
-        "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
-        "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
-      },
       "http.api": "${http.origin}${http.api.path}",
       "http.api.path": "${http.path}/api",
       "http.base.path": "/services",
