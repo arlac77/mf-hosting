@@ -59,6 +59,9 @@
           "properties": {
             "install.dir": "/app"
           },
+          "dependencies": {
+            "node": "lts-slim"
+          },
           "arch": [
             "aarch64"
           ]
