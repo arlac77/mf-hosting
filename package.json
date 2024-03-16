@@ -57,7 +57,8 @@
         },
         "docker": {
           "properties": {
-            "install.dir": "/app"
+            "install.dir": "/app",
+            "workdir": "${install.dir}"
           },
           "dependencies": {
             "node": "lts-slim"
