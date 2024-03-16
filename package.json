@@ -70,8 +70,7 @@
       "vendor": "MF",
       "groups": "services",
       "arch": [
-        "aarch64",
-        "x86_64"
+        "aarch64"
       ],
       "backup.config.dir": "/usr/lib/backup.d/",
       "config.dir": "/etc/${name}/",
