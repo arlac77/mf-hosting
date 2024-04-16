@@ -29,7 +29,7 @@
           ],
           "dependencies": {
             "systemd": ">=255.4",
-            "nginx-mainline": ">=1.25.4"
+            "nginx-mainline": ">=1.25.5"
           },
           "content": {
             "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
