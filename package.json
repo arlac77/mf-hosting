@@ -7,7 +7,14 @@
     "semantic-release-config"
   ],
   "files": [
-    ".releaserc.json"
+    ".releaserc.json",
+    "pkg/hooks.sh",
+    "pkg/nginx.conf",
+    "pkg/service.backup",
+    "pkg/systemd.service",
+    "pkg/systemd.socket",
+    "pkg/sysusers.conf",
+    "pkg/tmpfiles.conf"
   ],
   "main": ".releaserc.json",
   "devDependencies": {
