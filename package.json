@@ -1,11 +1,6 @@
 {
   "name": "mf-hosting",
   "version": "0.0.0-semantic-release",
-  "description": "hosting definitions @MF",
-  "keywords": [
-    "npm-pkgbuild",
-    "semantic-release-config"
-  ],
   "files": [
     ".releaserc.json",
     "pkg/hooks.sh",
@@ -17,12 +12,17 @@
     "pkg/tmpfiles.conf"
   ],
   "main": ".releaserc.json",
+  "description": "hosting definitions @MF",
+  "keywords": [
+    "npm-pkgbuild",
+    "semantic-release-config"
+  ],
   "devDependencies": {
-    "semantic-release": "^23.1.1",
     "@semantic-release/commit-analyzer": "^12.0.0",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/github": "^10.0.5",
-    "@semantic-release/release-notes-generator": "^13.0.0"
+    "@semantic-release/release-notes-generator": "^13.0.0",
+    "semantic-release": "^23.1.1"
   },
   "repository": {
     "type": "git",
