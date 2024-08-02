@@ -90,6 +90,7 @@
         "aarch64"
       ],
       "backup.config.dir": "/usr/lib/backup.d/",
+      "backup.lib.dir": "/usr/lib/backup.d/",
       "config.dir": "/etc/${name}/",
       "http.api": "${http.origin}${http.api.path}",
       "http.api.path": "${http.path}/api",
@@ -100,7 +101,6 @@
       "install.dir": "${install.base.dir}${name}${install.sub.dir}",
       "install.sub.dir": "/",
       "journal.endpoint": "/services/journal",
-      "nginx.sites.dir": "/etc/nginx/sites/common/",
       "os.group": "${name}",
       "os.user": "${name}",
       "polkit.rules.dir": "/etc/polkit-1/rules.d/",
@@ -117,10 +117,13 @@
       "well-known.content.dir": "/srv/http/.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "${http.origin}",
-      "backup.lib.dir": "/usr/lib/backup.d/",
       "node.exe": "/usr/bin/node",
       "bun.exe": "/usr/bin/bun",
-      "nginx.location.trailer": ""
+      "nginx.sites.dir": "/etc/nginx/sites/common/",
+      "nginx.location.trailer": "",
+      "nginx.server.extra": "",
+      "csp.header" : "",
+      "cache-control.header" : "private,no-store"
     },
     {
       "requires": {
