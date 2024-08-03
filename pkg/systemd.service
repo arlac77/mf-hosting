@@ -1,7 +1,7 @@
 [Unit]
 Description={{description}}
-Wants=network-online.target
-After=network-online.target
+Wants={{systemd.Wants}}
+After={{systemd.After}}
 StopWhenUnneeded=true
 
 [Service]
@@ -52,4 +52,4 @@ ProtectProc=noaccess
 SystemCallErrorNumber=EPERM
 
 [Install]
-WantedBy=multi-user.target
+WantedBy={{systemd.WantedBy}}
