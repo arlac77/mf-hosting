@@ -1,13 +1,15 @@
 backup()
 {
-    mkdir -p $1/{{name}}
-    cp -ra /etc/{{name}}/* $1/{{name}}
+    mkdir -p $1/{{name}}/etc
+    cp -ra /etc/{{name}}/* $1/{{name}}/etc
+    cp -raT /var/lib/{{name}} $1/{{name}}/lib
 }
 
 restore()
 {
     mkdir -p /etc/{{name}}
-    cp -ra $1/{{name}}/* /etc/{{name}}
+    cp -ra $1/{{name}}/etc/* /etc/{{name}}
+    cp -raT $1/{{name}}/var/ /var/lib/{{name}}
 }
 
 sync()
