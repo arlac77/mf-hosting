@@ -22,7 +22,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/github": "^10.1.5",
     "@semantic-release/release-notes-generator": "^13.0.0",
-    "semantic-release": "^24.0.0"
+    "semantic-release": "^24.1.0"
   },
   "repository": {
     "type": "git",
@@ -125,8 +125,8 @@
       "nginx.sites.dir": "/etc/nginx/sites/common/",
       "nginx.location.trailer": "",
       "nginx.server.extra": "",
-      "csp.header" : "",
-      "cache-control.header" : "private,no-store"
+      "csp.header": "",
+      "cache-control.header": "private,no-store"
     },
     {
       "requires": {
