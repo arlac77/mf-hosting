@@ -44,7 +44,7 @@
             "aarch64"
           ],
           "dependencies": {
-            "systemd": ">=256.5",
+            "systemd": ">=256.6",
             "nginx-mainline": ">=1.27.1"
           },
           "content": {
