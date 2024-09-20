@@ -38,7 +38,8 @@
         "arch": {
           "properties": {
             "systemd": true,
-            "nginx": true
+            "nginx": true,
+            "nginx.sites.dir": "/etc/nginx/sites/common/"
           },
           "arch": [
             "aarch64"
@@ -55,7 +56,8 @@
         "debian": {
           "properties": {
             "systemd": true,
-            "nginx": true
+            "nginx": true,
+            "nginx.sites.dir": "/etc/nginx/sites-available/"
           },
           "arch": [
             "aarch64",
@@ -65,7 +67,8 @@
         "rpm": {
           "properties": {
             "systemd": true,
-            "nginx": true
+            "nginx": true,
+            "nginx.sites.dir": "/etc/nginx/sites-available/"
           },
           "arch": [
             "aarch64"
@@ -74,7 +77,8 @@
         "docker": {
           "properties": {
             "install.dir": "/app",
-            "workdir": "${install.dir}"
+            "workdir": "${install.dir}",
+            "nginx.sites.dir": "/etc/nginx/sites-available/"
           },
           "dependencies": {
             "node": "lts-slim"
@@ -122,7 +126,6 @@
       "wss.origin": "${http.origin}",
       "node.exe": "/usr/bin/node",
       "bun.exe": "/usr/bin/bun",
-      "nginx.sites.dir": "/etc/nginx/sites/common/",
       "nginx.location.trailer": "",
       "nginx.server.extra": "",
       "csp.header": "",
