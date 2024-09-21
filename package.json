@@ -58,19 +58,25 @@
           "properties": {
             "systemd": true,
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites-available/",
             "nginx.content.dir": "/var/www/html/"
           },
           "arch": [
             "aarch64",
             "x86_64"
-          ]
+          ],
+          "dependencies": {
+            "systemd": ">=252.30",
+            "nginx": ">=1.22.1"
+          },
+          "content": {
+            "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+            "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
+          }
         },
         "rpm": {
           "properties": {
             "systemd": true,
-            "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites-available/"
+            "nginx": true
           },
           "arch": [
             "aarch64"
@@ -79,8 +85,7 @@
         "docker": {
           "properties": {
             "install.dir": "/app",
-            "workdir": "${install.dir}",
-            "nginx.sites.dir": "/etc/nginx/sites-available/"
+            "workdir": "${install.dir}"
           },
           "dependencies": {
             "node": "lts-slim"
@@ -128,8 +133,10 @@
       "wss.origin": "${http.origin}",
       "node.exe": "/usr/bin/node",
       "bun.exe": "/usr/bin/bun",
+      "nginx.location.header": "",
       "nginx.location.trailer": "",
       "nginx.server.extra": "",
+      "nginx.sites.dir": "/etc/nginx/sites-available/",
       "csp.header": "",
       "cache-control.header": "private,no-store"
     },
