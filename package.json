@@ -50,7 +50,7 @@
             "nginx-mainline": ">=1.27.1"
           },
           "content": {
-            "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+            "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
             "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
           }
         },
@@ -69,7 +69,7 @@
             "nginx": ">=1.22.1"
           },
           "content": {
-            "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+            "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
             "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
           }
         },
@@ -136,6 +136,8 @@
       "nginx.location.header": "",
       "nginx.location.trailer": "",
       "nginx.server.extra": "",
+      "nginx.locations.dir": "/etc/nginx/locations/",
+      "nginx.location.category": "common",
       "nginx.sites.dir": "/etc/nginx/sites-available/",
       "csp.header": "",
       "cache-control.header": "private,no-store"
@@ -151,7 +153,8 @@
       "groups": "examples",
       "description": "example showing ${name} features in action",
       "variant": "mf.linux",
-      "nginx.location.trailer": "  access_log off;\n"
+      "nginx.location.trailer": "  access_log off;\n",
+      "nginx.location.category": "examples"
     },
     {
       "requires": {
