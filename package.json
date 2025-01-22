@@ -46,8 +46,8 @@
             "aarch64"
           ],
           "dependencies": {
-            "systemd": ">=257",
-            "nginx-mainline": ">=1.27.2"
+            "systemd": ">=257.2",
+            "nginx-mainline": ">=1.27.3"
           },
           "content": {
             "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
