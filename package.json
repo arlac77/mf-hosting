@@ -47,7 +47,7 @@
           ],
           "dependencies": {
             "systemd": ">=257.5",
-            "nginx-mainline": ">=1.27.4"
+            "nginx-mainline": ">=1.27.5"
           },
           "content": {
             "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
