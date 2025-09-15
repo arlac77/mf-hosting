@@ -126,6 +126,7 @@
       "systemd.After": "network-online.target",
       "sysusers.config.dir": "/usr/lib/sysusers.d/",
       "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
+      "credentials.dir": "/etc/credstore.encrypted/",
       "var.dir": "/var/lib/${name}/",
       "variant": "mf.linux",
       "well-known.content.dir": "${nginx.content.dir}.well-known/",
