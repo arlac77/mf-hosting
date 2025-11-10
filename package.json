@@ -20,9 +20,9 @@
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/exec": "^7.1.0",
-    "@semantic-release/github": "^12.0.1",
+    "@semantic-release/github": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.1.0",
-    "semantic-release": "^25.0.1"
+    "semantic-release": "^25.0.2"
   },
   "repository": {
     "type": "git",
@@ -46,8 +46,8 @@
             "aarch64"
           ],
           "dependencies": {
-            "systemd": ">=258.1",
-            "nginx-mainline": ">=1.29.2"
+            "systemd": ">=258.2",
+            "nginx-mainline": ">=1.29.3"
           },
           "content": {
             "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
