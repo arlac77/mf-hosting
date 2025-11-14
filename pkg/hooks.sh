@@ -6,13 +6,15 @@ post_install() {
 	systemctl start {{name}}.socket
 }
 
-pre_upgrade() {
-	systemctl stop {{name}}
-}
-
 post_upgrade() {
-	systemctl daemon-reload
-	systemctl restart {{name}}.socket
+	systemctl is-active {{name}} >/dev/null
+	ACTIVE=$?
+    if [ $ACTIVE -eq 0 ]
+	then
+		systemctl daemon-reload
+		systemctl restart {{name}}.socket
+		systemctl restart {{name}}
+	fi
 }
 
 pre_remove() {
