@@ -115,7 +115,7 @@
       "os.group": "${name}",
       "os.user": "${name}",
       "polkit.rules.dir": "/etc/polkit-1/rules.d/",
-      "public.base.url": "https://mfelten.dynv6.net/",
+      "public.base.url": "${http.origin}/",
       "run.dir": "/run/${name}/",
       "socket.http": "${run.dir}http/socket",
       "socket.http.group": "http",
