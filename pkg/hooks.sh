@@ -12,8 +12,10 @@ post_upgrade() {
     if [[ $ACTIVE -eq 0 ]]
 	then
 		systemctl daemon-reload
-		systemctl restart {{name}}
-		systemctl restart {{name}}.socket
+		systemctl stop {{name}}
+		systemctl stop {{name}}.socket
+		systemctl start {{name}}.socket
+		systemctl start {{name}}
 	fi
 }
 
