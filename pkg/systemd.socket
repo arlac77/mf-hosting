@@ -1,7 +1,7 @@
 [Socket]
-ListenStream={{socket.http}}
-SocketUser={{socket.http.user}}
-SocketGroup={{socket.http.group}}
+ListenStream={{socket_http}}
+SocketUser={{socket_http_user}}
+SocketGroup={{socket_http_group}}
 MaxConnections=4
 FileDescriptorName=http.listen.socket
 

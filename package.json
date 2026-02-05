@@ -40,8 +40,8 @@
           "properties": {
             "systemd": true,
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites/common/",
-            "nginx.content.dir": "/srv/http/"
+            "nginx_sites_dir": "/etc/nginx/sites/common/",
+            "nginx_content_dir": "/srv/http/"
           },
           "arch": [
             "aarch64"
@@ -51,15 +51,15 @@
             "nginx-mainline": ">=1.29.5"
           },
           "content": {
-            "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
-            "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
+            "${nginx_locations_dir}${nginx_location_category}/${name}.conf": "pkg/nginx.conf",
+            "${systemd_unit_dir}${name}.socket": "pkg/systemd.socket"
           }
         },
         "debian": {
           "properties": {
             "systemd": true,
             "nginx": true,
-            "nginx.content.dir": "/var/www/html/"
+            "nginx_content_dir": "/var/www/html/"
           },
           "arch": [
             "aarch64",
@@ -70,8 +70,8 @@
             "nginx": ">=1.22.1"
           },
           "content": {
-            "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf",
-            "${systemd.unit.dir}${name}.socket": "pkg/systemd.socket"
+            "${nginx_locations_dir}${nginx_location_category}/${name}.conf": "pkg/nginx.conf",
+            "${systemd_unit_dir}${name}.socket": "pkg/systemd.socket"
           }
         },
         "rpm": {
@@ -85,8 +85,8 @@
         },
         "docker": {
           "properties": {
-            "install.dir": "/app",
-            "workdir": "${install.dir}"
+            "install_dir": "/app",
+            "workdir": "${install_dir}"
           },
           "dependencies": {
             "node": "lts-slim"
@@ -101,48 +101,48 @@
       "arch": [
         "aarch64"
       ],
-      "backup.config.dir": "/usr/lib/backup.d/",
-      "backup.lib.dir": "/usr/lib/backup.d/",
-      "config.dir": "/etc/${name}/",
-      "http.api": "${http.origin}${http.api.path}",
-      "http.api.path": "${http.path}/api",
-      "http.base.path": "/services",
-      "http.origin": "https://mfelten.dynv6.net",
-      "http.path": "${http.base.path}/${name}",
-      "install.base.dir": "/services/",
-      "install.dir": "${install.base.dir}${name}${install.sub.dir}",
-      "install.sub.dir": "/",
-      "journal.endpoint": "/services/journal",
-      "os.group": "${name}",
-      "os.user": "${name}",
-      "polkit.rules.dir": "/etc/polkit-1/rules.d/",
-      "public.base.url": "${http.origin}/",
-      "run.dir": "/run/${name}/",
-      "socket.http": "${run.dir}http/socket",
-      "socket.http.group": "http",
-      "socket.http.user": "http",
-      "systemd.unit.dir": "/usr/lib/systemd/system/",
-      "systemd.WantedBy": "multi-user.target",
-      "systemd.Wants": "network-online.target",
-      "systemd.After": "network-online.target",
-      "sysusers.config.dir": "/usr/lib/sysusers.d/",
-      "tmpfiles.config.dir": "/usr/lib/tmpfiles.d/",
-      "credentials.dir": "/etc/credstore.encrypted/",
-      "var.dir": "/var/lib/${name}/",
+      "backup_config_dir": "/usr/lib/backup.d/",
+      "backup_lib_dir": "/usr/lib/backup.d/",
+      "config_dir": "/etc/${name}/",
+      "http_api": "${http_origin}${http_api_path}",
+      "http_api_path": "${http_path}/api",
+      "http_base_path": "/services",
+      "http_origin": "https://mfelten.dynv6.net",
+      "http_path": "${http_base_path}/${name}",
+      "install_base_dir": "/services/",
+      "install_dir": "${install_base_dir}${name}${install_sub_dir}",
+      "install_sub_dir": "/",
+      "journal_endpoint": "/services/journal",
+      "os_group": "${name}",
+      "os_user": "${name}",
+      "polkit_rules_dir": "/etc/polkit-1/rules.d/",
+      "public_base_url": "${http_origin}/",
+      "run_dir": "/run/${name}/",
+      "socket_http": "${run_dir}http/socket",
+      "socket_http_group": "http",
+      "socket_http_user": "http",
+      "systemd_unit_dir": "/usr/lib/systemd/system/",
+      "systemd_WantedBy": "multi-user.target",
+      "systemd_Wants": "network-online.target",
+      "systemd_After": "network-online.target",
+      "sysusers_config_dir": "/usr/lib/sysusers.d/",
+      "tmpfiles_config_dir": "/usr/lib/tmpfiles.d/",
+      "credentials_dir": "/etc/credstore.encrypted/",
+      "var_dir": "/var/lib/${name}/",
       "variant": "mf.linux",
-      "well-known.content.dir": "${nginx.content.dir}.well-known/",
-      "wss.api": "${wss.origin}${http.api.path}",
-      "wss.origin": "${http.origin}",
-      "node.exe": "/usr/bin/node",
-      "bun.exe": "/usr/bin/bun",
-      "nginx.location.header": "",
-      "nginx.location.trailer": "",
-      "nginx.server.extra": "",
-      "nginx.locations.dir": "/etc/nginx/locations/",
-      "nginx.location.category": "common",
-      "nginx.sites.dir": "/etc/nginx/sites-available/",
-      "csp.header": "",
-      "cache-control.header": "private,no-store"
+      "well-known_content_dir": "${nginx_content_dir}.well-known/",
+      "wss_api": "${wss_origin}${http_api_path}",
+      "wss_origin": "${http_origin}",
+      "node_exe": "/usr/bin/node",
+      "bun_exe": "/usr/bin/bun",
+      "nginx_location_header": "",
+      "nginx_location_trailer": "",
+      "nginx_server_extra": "",
+      "nginx_locations_dir": "/etc/nginx/locations/",
+      "nginx_location_category": "common",
+      "nginx_sites_dir": "/etc/nginx/sites-available/",
+      "csp_header": "",
+      "cache_control_header": "private,no-store"
     },
     {
       "requires": {
@@ -150,13 +150,13 @@
           "example": true
         }
       },
-      "install.base.dir": "/examples/",
-      "http.base.path": "/examples",
+      "install_base_dir": "/examples/",
+      "http_base_path": "/examples",
       "groups": "examples",
       "description": "example showing ${name} features in action",
       "variant": "mf.linux",
-      "nginx.location.trailer": "  access_log off;\n",
-      "nginx.location.category": "examples"
+      "nginx_location_trailer": "  access_log off;\n",
+      "nginx_location_category": "examples"
     },
     {
       "requires": {
@@ -168,11 +168,11 @@
         }
       },
       "content": {
-        "${backup.lib.dir}${name}.backup": "pkg/service.backup",
-        "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
-        "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
+        "${backup_lib_dir}${name}.backup": "pkg/service.backup",
+        "${sysusers_config_dir}${name}.conf": "pkg/sysusers.conf",
+        "${tmpfiles_config_dir}${name}.conf": "pkg/tmpfiles.conf"
       },
-      "backup": "${config.dir}config.json",
+      "backup": "${config_dir}config.json",
       "hooks": "pkg/hooks.sh",
       "variant": "mf.linux"
     }
