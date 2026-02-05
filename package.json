@@ -130,7 +130,7 @@
       "credentials_dir": "/etc/credstore.encrypted/",
       "var_dir": "/var/lib/${name}/",
       "variant": "mf.linux",
-      "well-known_content_dir": "${nginx_content_dir}.well-known/",
+      "well_known_content_dir": "${nginx_content_dir}.well-known/",
       "wss_api": "${wss_origin}${http_api_path}",
       "wss_origin": "${http_origin}",
       "node_exe": "/usr/bin/node",
