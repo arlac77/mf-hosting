@@ -10,3 +10,9 @@
 Hosting definitions
 
 Information used to create packages/images used by npm-pkgbuild
+
+Platforms:
+	arch - aarch64
+	debian - aarch64
+	rpm - aarch64
+
