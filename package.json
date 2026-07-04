@@ -14,7 +14,7 @@
     "pkg/sysusers.conf",
     "pkg/tmpfiles.conf"
   ],
-  "packageManager": "npm@11.16.0",
+  "packageManager": "npm@11.18.0",
   "main": ".releaserc.json",
   "description": "hosting definitions @MF",
   "keywords": [
