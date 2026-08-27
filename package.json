@@ -46,7 +46,7 @@
   "pkgbuild": [
     {
       "output": {
-        "arch": {
+        "alpm": {
           "properties": {
             "systemd": true,
             "nginx": true,
@@ -58,7 +58,7 @@
           ],
           "dependencies": {
             "systemd": ">=261.2",
-            "nginx-mainline": ">=1.31.3"
+            "nginx-mainline": ">=1.31.4"
           },
           "content": {
             "${nginx_locations_dir}${nginx_location_category}/${name}.conf": "pkg/nginx.conf",
